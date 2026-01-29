@@ -1,3 +1,8 @@
+package banca.main;
+
+import banca.model.Cuenta;
+import banca.model.Movimiento;
+import banca.security.GestorSeguridad;
 
 import java.util.Scanner;
 
@@ -22,7 +27,7 @@ public class Principal {
 
         if (cuenta == null) {
             System.out.println("No existen datos. Creando cuenta nueva...");
-            System.out.print("Introduce Número de Cuenta: ");
+            System.out.print("Introduce Número de banca.model.Cuenta: ");
             String num = sc.nextLine();
             System.out.print("Introduce Nombre Cliente: ");
             String nom = sc.nextLine();
@@ -55,7 +60,7 @@ public class Principal {
                 case "3":
                     System.out.println("--- MOVIMIENTOS ---");
                     System.out.println("Cliente (Descifrado): " + cuenta.getNombreCliente());
-                    System.out.println("Cuenta (Descifrado): " + cuenta.getNumeroCuenta());
+                    System.out.println("banca.model.Cuenta (Descifrado): " + cuenta.getNumeroCuenta());
                     for (Movimiento m : cuenta.getMovimientos()) {
                         System.out.println(m); // Se imprime sin descifrar porque no estaba cifrado
                     }

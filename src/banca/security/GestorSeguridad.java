@@ -1,7 +1,11 @@
+package banca.security;
+
+import banca.model.Cuenta;
+import banca.model.Movimiento;
+
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
         import java.security.*;
         import java.util.ArrayList;
