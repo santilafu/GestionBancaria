@@ -32,6 +32,7 @@ public class Movimiento implements Serializable {
     }
     /** Devuelve el importe con signo negativo si es retirada. Útil para calcular saldo. */
     public double getImporteReal() {
+        // Si es 'R' (Retirada), devuelve negativo. Si es 'I', positivo.
         return (this.tipo == 'R' ? -this.importe : this.importe);
     }
 
